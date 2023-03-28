@@ -1,4 +1,8 @@
 package ezen.hang.heritage.dto;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 /**
  * 문화재 객체 자체 생성
  * "ccbaKdcd", "ccbaAsno", "ccbaCtcd", "ccbaCpno", "longitude", "latitude", "ccmaName", "crltsnoNm", "ccbaMnm1", "ccbaMnm2", "gcodeName", "bcodeName", "mcodeName", "scodeName", "ccbaQuan", "ccbaAsdt", "ccbaCtcdNm", "ccsiName", "ccbaLcad", "ccceName", "ccbaPoss", "ccbaAdmin", "ccbaCncl", "ccbaCndt", "imageUrl", "content"
@@ -6,6 +10,8 @@ package ezen.hang.heritage.dto;
  * @date   2023. 3. 27.
  */
 public class Heritage {
+    private String sn;
+    private String no;
 	private String ccbaKdcd;
 	private String ccbaAsno;
 	private String ccbaCtcd;
@@ -41,12 +47,13 @@ public class Heritage {
 		this.ccbaMnm1 = ccbaMnm1;
 	}
 
-	public Heritage(String ccbaKdcd, String ccbaAsno, String ccbaCtcd, String ccbaCpno, String longitude,
+	public Heritage(String sn, String no, String ccbaKdcd, String ccbaAsno, String ccbaCtcd, String ccbaCpno, String longitude,
 			String latitude, String ccmaName, String crltsnoNm, String ccbaMnm1, String ccbaMnm2, String gcodeName,
 			String bcodeName, String mcodeName, String scodeName, String ccbaQuan, String ccbaAsdt, String ccbaCtcdNm,
 			String ccsiName, String ccbaLcad, String ccceName, String ccbaPoss, String ccbaAdmin, String ccbaCncl,
 			String ccbaCndt, String imageUrl, String content) {
-		super();
+		this.sn = sn;
+		this.no = no;
 		this.ccbaKdcd = ccbaKdcd;
 		this.ccbaAsno = ccbaAsno;
 		this.ccbaCtcd = ccbaCtcd;
@@ -73,6 +80,22 @@ public class Heritage {
 		this.ccbaCndt = ccbaCndt;
 		this.imageUrl = imageUrl;
 		this.content = content;
+	}
+	
+	public String getSn() {
+		return sn;
+	}
+	
+	public void setSn(String sn) {
+		this.sn = sn;
+	}
+	
+	public String getNo() {
+		return no;
+	}
+	
+	public void setNo(String no) {
+		this.no = no;
 	}
 
 
@@ -335,6 +358,9 @@ public class Heritage {
 		this.content = content;
 	}
 	
-	
+	public String toJson() {
+        Gson gson = new GsonBuilder().create();
+        return gson.toJson(this);
+    }
 	
 }
