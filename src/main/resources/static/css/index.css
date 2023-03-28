@@ -1,0 +1,224 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'moonhwa';
+}
+
+a {
+	text-decoration: none;
+}
+
+@font-face {
+    font-family: 'moonhwa';
+    src: url('font/moonhwa-bold.woff') format('truetype');
+}
+
+.some {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+
+
+.hangim {
+	box-sizing: content-box;
+}
+
+.hangim>img {
+	width: 90%;
+	background-color:rgb(255, 255, 255);
+	margin-left: 5%;
+
+}
+
+
+
+
+.hangim2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	animation: fadeInOut 1s ease-in-out;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 1;
+		z-index: 12;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		z-index: -99;
+	}
+}
+
+
+
+
+.mbd {
+	width: 100%;
+	overflow: hidden;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+}
+
+.mbd ul {
+	width: 1000%;
+	display: flex;
+	animation: mbd 52s infinite;
+	list-style-type: none;
+
+}
+
+.mbd>ul>li>img {
+	width: 100%;
+	opacity: 0.7;
+}
+
+
+div.maintextt02 {
+	width: 60%;
+	height: 50%;
+	line-height: 400%;
+	z-index: 2;
+	padding: 50px;
+	font-size: 18px;
+	color: black;
+	font-weight: 800;
+	position:absolute;
+	bottom:25%;
+	left: 20%;
+	text-align: center;
+	font-family: 'moonhwa';
+}
+
+.maintextt02 p:nth-child(1) {
+	font-weight: bold;
+	font-size:2em;
+}
+.maintextt02 p:nth-child(2) {
+	font-size: 1.5em;
+}
+
+
+
+
+
+
+.btn {
+	width:100px;
+	
+	border-radius: 10px;
+
+	background-color: gray;
+
+	border: none;
+
+    color:#fff;
+
+    padding: 15px 0;
+
+    text-align: center;
+
+    display: inline-block;
+
+    font-size: 15px;
+}
+
+
+
+@keyframes mbd {
+	0% {
+		margin-left: 0;
+	}
+
+	5% {
+		margin-left: 0;
+	}
+
+	10% {
+		margin-left: -100%;
+	}
+
+	15% {
+		margin-left: -100%;
+	}
+
+	20% {
+		margin-left: -200%;
+	}
+
+	25% {
+		margin-left: -200%;
+	}
+
+	30% {
+		margin-left: -300%;
+	}
+
+	35% {
+		margin-left: -300%;
+	}
+
+	40% {
+		margin-left: -400%;
+	}
+
+	45% {
+		margin-left: -400%;
+	}
+
+	50% {
+		margin-left: -500%;
+	}
+
+	55% {
+		margin-left: -500%;
+	}
+
+	60% {
+		margin-left: -600%;
+	}
+
+	65% {
+		margin-left: -600%;
+	}
+
+	70% {
+		margin-left: -700%;
+	}
+
+	75% {
+		margin-left: -700%;
+	}
+
+	80% {
+		margin-left: -800%;
+	}
+
+	85% {
+		margin-left: -800%;
+	}
+
+	90% {
+		margin-left: -900%;
+	}
+
+	95% {
+		margin-left: -900%;
+	}
+
+	100% {
+		margin-left: 0%;
+	}
+}
