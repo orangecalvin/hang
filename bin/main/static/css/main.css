@@ -1,0 +1,283 @@
+
+/*=======================nav 시작========================*/
+.hangnav {
+  /*nav바 전체 : hang_01 */
+  z-index: 9999;
+  background-color: rgb(223, 228, 239);
+  border-bottom: 4px solid rgb(140, 145, 236);
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 0px 0px 30px 30px;
+}
+
+
+
+.hangsearch {
+  /* nav 검색창 : hang_02 */
+  position: relative;
+}
+
+
+.shabsolute {
+  /* 검색창 돋보기*/
+  position: absolute;
+  width: 17px;
+  top: 10px;
+  right: 12px;
+}
+
+
+/* 로그인 구역 :hang_03 */
+.hanglogin {
+  /*로그인 버튼 간격*/
+  padding-right: 10px;
+}
+
+.logbtn {
+  /*로그인버튼*/
+  border: none;
+}
+
+#top1 {
+  /* 로그인 모달 창 바탕 */
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 40px;
+  border-radius: 80px;
+  background-color: #f5f5f5;
+  box-shadow: 1px 1px 5px rgb(98, 107, 233);
+  text-align: center;
+
+}
+
+.hanglogcont {  /* 로그인 모달 창 바탕 2*/
+  background-color: #f5f5f5;
+  box-shadow: 1px 1px 5px rgb(98, 107, 233);
+}
+
+.hangmodal {
+  /*로그인 모달창 3*/
+  border-radius: 80px;
+}
+
+/* !!부트스트랩 권장값 자세히는 모름*/
+.form-signin {
+  max-width: 330px;
+  /* padding: 15px 0px; */
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* !!부트스트랩 권장값 끝*/
+
+
+.wellcome {
+  /* 아이디 비번 찾기 */
+  text-shadow: -1px -1px 5px #666;
+  font-size: 0.8em;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.loghr {
+  /* 로그인쪽 hr */
+  border: 1px solid gray;
+}
+
+.wellcol a {
+  /* 아이디 비번 찾기 */
+  text-decoration: none;
+  color: rgb(98, 107, 233);
+}
+
+.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border: 1px;
+  border-radius: 5px;
+  transition: all 0.2s ;
+} 
+
+/* 회원 가입 시작: hang_04 */
+
+.newgestbtn {
+  /*회원가입 버튼 간격  */
+  padding-right: 10px;
+}
+
+/*회원 가입 끝*/
+
+
+/* 어사이드 오른쪽 버튼 : hang_05 */
+.hangtoggler{ /* 햄버거 버튼 외부*/
+  border: none;
+}
+.hangtoggler:focus {
+  /*이거 안하면 클릭시 이상한 선 생김*/
+  box-shadow: none;
+}
+
+.hangtoggler-icon:hover {
+  /*햄버거 호버시 색깔 두께*/
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(177, 49, 81)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.hangtoggler-icon {
+  /*햄버거 평소 색깔 두께*/
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(135, 119, 236)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.bug1 {
+  /* 어사이드 위치 조정 보더는 지워도됨 */
+  height: 500px;
+  margin-top: 150px;
+  border: 2px solid rgb(200, 202, 247);
+}
+
+.bug2 {
+  /* 어사이드 영역 체크용 보더는 지워도됨 */
+  border: 2px solid rgb(200, 202, 247);
+}
+
+.bug3 {
+  /* 어사이드 영역 체크용 보더는 지워도됨 */
+  border: 2px solid rgb(200, 202, 247);
+}
+
+/*=======================nav 끝========================*/
+
+input[id="menuicon"] {
+      display: none;
+    }
+
+    input[id="menuicon"]+ul {
+      display: block;
+      position: fixed;
+      left: -32px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .35s;
+      text-align: right;
+    }
+
+    input[id="menuicon"]+ul>li {
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      margin-top: -1px;
+    }
+
+    input[id="menuicon"]+ul>li>a {
+      display: block;
+      width: auto;
+      height: 50px;
+      overflow: hidden;
+      transition: all .35s;
+    }
+
+    input[id="menuicon"]+ul>li>label {
+      display: block;
+      cursor: pointer;
+      width: auto;
+      height: 50px;
+      background: rgb(135, 119, 236);
+    }
+
+    input[id="menuicon"]+ul>li:nth-child(1) label span {
+      display: block;
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      border-radius: 30px;
+      background: rgb(223, 228, 239);
+      transition: all .35s;
+    }
+
+    input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(1) {
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(2) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    input[id="menuicon"]+ul>li:nth-child(1) label span:nth-child(3) {
+      bottom: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    input[id="menuicon"]:checked+ul {
+      z-index: 2;
+      left: 318px;
+    }
+
+    input[id="menuicon"]:checked+ul>li:nth-child(1) label {
+      z-index: 2;
+      left: 318px;
+    }
+
+    input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(2) {
+      opacity: 0;
+    }
+
+    input[id="menuicon"]:checked+ul>li:nth-child(1) label span:nth-child(3) {
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%) rotate(-45deg);
+    }
+
+    div[class="sidebar"] {
+      width: 350px;
+      height: 100%;
+      background: rgb(223, 228, 239);
+      position: fixed;
+      top: 0;
+      left: -350px;
+      z-index: 1;
+      transition: all .35s;
+      border-right: 4px solid rgb(140, 145, 236);
+      border-radius: 0px 30px 30px 0px;
+    }
+
+    input[id="menuicon"]:checked+ul+div {
+      left: 0;
+    }
+
+/*안녕하세요 디버깅용입니다*/
+
