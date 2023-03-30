@@ -7,12 +7,12 @@
         <!-- 검색창 시작-->
         <div class="col-5 relative hangsearch">
           <!--nav 검색창 : hang_02 -->
-          <form action="/search" id="heritagename" method="post" style="height: 38px;">
-          <input type="text" class="form-control" name="heritagename" placeholder="검색"
+          <form id="heritagename" method="post" >
+          <input id="searchInput" type="text" class="form-control" name="heritagename" placeholder="검색"
             aria-label="Recipient's username"
             aria-describedby="button-addon2" maxlength="50">
-            <a role="button" type="submit" onclick="document.getElementById('heritagename').submit();"><img class="shabsolute" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
-            </form>
+            <a id="searchButton" role="button" ><img class="shabsolute" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
+           </form>
         </div>
         
         

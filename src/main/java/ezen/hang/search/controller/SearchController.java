@@ -2,11 +2,11 @@ package ezen.hang.search.controller;
 
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import ezen.hang.heritage.dto.Heritage;
 import ezen.hang.search.dao.HeritageDataSearchParsing;
@@ -16,7 +16,7 @@ import ezen.hang.search.dao.HeritageDataSearchParsing;
  * @author 김정석
  * @date   2023. 3. 28.
  */
-@Controller
+@RestController
 @RequestMapping("/search")
 public class SearchController {
 	
@@ -24,7 +24,7 @@ public class SearchController {
 	@ResponseBody
 	public List<Heritage> search(@RequestParam("heritagename") String heritagename) {
 		HeritageDataSearchParsing hdsp = new HeritageDataSearchParsing();
-		hdsp.setCcbaMnm1Value(heritagename); // test.html에서 받아온 검색단어를 문화재청 API에 단어검색으로 입력
+		hdsp.setCcbaMnm1Value(heritagename);
 		return hdsp.searchHeritageParsing();
 	}
 }
