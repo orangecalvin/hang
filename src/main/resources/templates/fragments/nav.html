@@ -102,118 +102,12 @@
           <li class="nav-item newgestbtn">
 
             <button type="button" class="btn btn-primary buttonbackimg"
-              data-bs-toggle="modal" data-bs-target="#regist">
+                    data-bs-toggle="modal" data-bs-target="#regist">
               회원가입</button>
 
 
-            <div class="container">
-              <main>
+            <div th:insert="~{fragments/register :: register}"></div>
 
-                <div class="modal fade" id="regist" tabindex="-1"
-                  aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content hanglogcont">
-
-
-
-
-                      <div class="row g-5 justify-content-md-center p-5">
-                        <div class="col-md-5 col-lg-12">
-                          <h2 class="mb-3">회원가입 신청서</h2>
-                          <div id="essential" class="mb-3">
-                            <span class="dp-1">*</span> 는 필수입력
-                          </div>
-                          <form class="needs-validation" novalidate
-                            method="post" id="myForm">
-                            <div class="row g-3">
-
-                              <div class="col-12">
-                                <label for="lastName" class="form-label">이름<span
-                                  class="dp-1">*</span></label> <input
-                                  type="text" class="form-control"
-                                  id="name" placeholder="" value=""
-                                  required>
-                                <div class="invalid-feedback">이름이
-                                  잘못 입력되었습니다.</div>
-                              </div>
-
-                              <div class="col-12">
-                                <label for="username" class="form-label">아이디<span
-                                  class="dp-1">*</span></label>
-                                <div class="input-group has-validation">
-                                  <input type="text"
-                                    class="form-control" id="username"
-                                    placeholder="ID" required>
-                                  <div class="invalid-feedback">
-                                    아이디를 잘못 입력되었습니다.</div>
-                                </div>
-                              </div>
-
-                              <div
-                                class="form-group has-feedback col-12">
-                                <label for="password" class="form-label">비밀번호<span
-                                  class="dp-1">*</span></label>
-                                <div class="input-group has-validation">
-                                  <input type="text"
-                                    class="form-control" id="password1"
-                                    placeholder="Password" required>
-                                </div>
-                                <div class="invalid-feedback">
-                                  비밀번호를 잘못 입력되었습니다.</div>
-                              </div>
-
-
-                              <div
-                                class="form-group has-feedback col-12">
-                                <label for="passwordConfirm"
-                                  class="form-label">비밀번호 확인<span
-                                  class="dp-1">*</span></label>
-                                <div class="input-group has-validation">
-                                  <input type="text"
-                                    class="form-control" id="password2"
-                                    placeholder="Password Confirm"
-                                    required>
-                                  <div class="invalid-feedback">
-                                    비밀번호가 맞지 않습니다.</div>
-                                </div>
-                              </div>
-
-                              <div class="col-12">
-                                <label for="phone" class="form-label">연락처<span
-                                  class="dp-1">*</span></label> <input
-                                  type="text" class="form-control"
-                                  id="phone" placeholder="010-1234-5678"
-                                  required>
-                              </div>
-
-                              <div class="col-12">
-                                <label for="email" class="form-label">이메일</label>
-                                <input type="email" class="form-control"
-                                  id="email"
-                                  placeholder="example@google.com">
-                              </div>
-
-
-                            </div>
-                          </form>
-
-                          <div class="mt-2 mx-auto text-wrap">
-                            <button
-                              class="w-100 btn btn-primary btn-lg mt-4 buttonbackimg"
-                              onclick="confirm1();" type="submit">가입</button>
-                            <button
-                              class="w-100 btn btn-secondary btn-lg mt-4 buttonbackimg"
-                              data-bs-dismiss="modal">취소</button>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </main>
-
-            </div> <!--회원가입 끝 -->
           </li>
 
         </ul>
