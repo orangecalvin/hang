@@ -1,4 +1,4 @@
-package ezen.hang.search.enums;
+package ezen.hang.heritage.search.enums;
 
 public enum Citycode {
 	SEOUL("서울", "11"),

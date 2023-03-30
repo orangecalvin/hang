@@ -1,4 +1,4 @@
-package ezen.hang.search.dao;
+package ezen.hang.heritage.search.dto;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ezen.hang.search.enums;
+package ezen.hang.heritage.search.enums;
 
 public enum Classification {
 	NATIONAL_TREASURE("국보", "11"),

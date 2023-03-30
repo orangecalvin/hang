@@ -1,4 +1,4 @@
-package ezen.hang.search.controller;
+package ezen.hang.heritage.search.controller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import ezen.hang.heritage.dto.Heritage;
-import ezen.hang.search.dao.HeritageDataSearchParsing;
+import ezen.hang.heritage.Heritage;
+import ezen.hang.heritage.search.dto.HeritageDataSearchParsing;
 /**
  * post로 전송받은 검색단어로 검색결과 반환 클래스
  * view에서 heritagename의 parameter로 전송되어야 검색가능

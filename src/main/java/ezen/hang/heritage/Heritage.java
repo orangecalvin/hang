@@ -1,4 +1,4 @@
-package ezen.hang.heritage.dto;
+package ezen.hang.heritage;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
