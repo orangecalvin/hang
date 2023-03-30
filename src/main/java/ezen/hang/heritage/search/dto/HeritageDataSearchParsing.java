@@ -54,6 +54,14 @@ public class HeritageDataSearchParsing {
 	                    heritage.setLongitude(eElement.getElementsByTagName("longitude").item(0).getTextContent());
 	                    heritage.setLatitude(eElement.getElementsByTagName("latitude").item(0).getTextContent());
 	                    list.add(heritage);
+//						StringBuilder sb = new StringBuilder();
+//						Element el = eElement;
+//						String[] fields = {"sn", "no", "ccmaName", "crltsnoNm", "ccbaMnm1", "ccbaMnm2", "ccbaCtcdNm", "ccbaAdmin", "ccbaKdcd", "ccbaCtcd", "ccbaAsno", "ccbaCncl", "ccbaCpno", "longitude", "latitude"};
+//						for (String field : fields) {
+//							sb.append("!");
+//						    sb.append(el.getElementsByTagName(field).item(0).getTextContent());
+//						}
+//						list.add(sb.toString());
 					}
 			}
 		} catch (Exception e) {

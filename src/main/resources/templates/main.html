@@ -201,22 +201,31 @@ input[id="menuicon"] {
   </script>
 
   <!-- #############nav 끝##################-->
-  <div style="z-index: 9999; position: relative;">
-    <input type="checkbox" id="menuicon">
-    <ul>
-      <li><label for="menuicon"> <span></span><span></span><span></span>
-      </label></li>
+  <div style="z-index: 9999;  position: relative;" >
+      <input type="checkbox" id="menuicon" >
+<ul>
+  <li>
+    <label for="menuicon">
+      <span></span><span></span><span></span>
+    </label>
+  </li>
+  
+</ul>
 
-    </ul>
-
-    <!-- 문화재 검색결과 사이드바 -->
-    <div id="scrollBarDesign" class="sidebar" style="overflow:auto;">
-      <p style="text-align:center ; font-size:2em ;">검색 결과</p>
-      <div id="searchResult"></div>
-    </div>
-    
-    
+<div class="sidebar">
+  <div id="searchResult">문화재</div>
+</div>
   </div>
+  
+    <script>
+const resultArr = '${result}'.slice(2, -2).split('!');
+let count = 1;
+//각 문화재별 15개씩으로 구분해야 함
+resultArr.forEach((value) => {
+  document.getElementById('searchResult').innerHTML += count + '번째 ' + value + '<br>';
+  count++;
+});
+</script>
   
 
 
