@@ -3,7 +3,7 @@
                         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper	namespace="ezen.hang.heritage.login.dto">
 
-	<select id="findByAll" resultType="Member">
+	<select id="findByAll" resultType="logindto">
 		SELECT *
 		FROM member
 	</select>
