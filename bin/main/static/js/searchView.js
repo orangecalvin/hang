@@ -32,16 +32,18 @@ function searchHeritage() {
 			for (let i = 0; i < data.length; i++) {
 				let item = data[i];
 				html += `<div style="border:1px solid black; margin-bottom:20px;">`;
-				html += `<h3>${item.sn}번 검색결과</h3>`;
-				html += `<p>문화재 : ${item.ccbaMnm1}(${item.ccbaMnm2})</p>`;
+				html += `<p style="font-size:1.2em; font-weight:bold;">문화재명</p>
+				<p>${item.ccbaMnm1}(${item.ccbaMnm2})</p>`;
 				html += `<p>종목 : ${item.ccmaName}</p>`;
-				html += `<a class="detail-link" onclick="detailContent(event)">
+				html += `<p>위치 : ${item.ccbaCtcdNm} ${item.ccbaAdmin}</p>`;
+				html += `<a class="detail-link" onclick="detailContent(event)" style="cursor: pointer;">
 				<input type="hidden" id="${item.sn}" name="sn" value="${item.sn}">
 				<input type="hidden" id="${item.ccbaKdcd}" name="ccbaKdcd" value="${item.ccbaKdcd}">
 				<input type="hidden" id="${item.ccbaAsno}" name="ccbaAsno" value="${item.ccbaAsno}">
 				<input type="hidden" id="${item.ccbaCtcd}" name="ccbaCtcd" value="${item.ccbaCtcd}">
+				<input type="hidden" id="${item.latitude}" name="latitude" value="${item.latitude}">
+				<input type="hidden" id="${item.longitude}" name="longitude" value="${item.longitude}">
 				자세히보기</a>`;
-				html += `<p><a href="#">위도: ${item.latitude}, 경도: ${item.longitude}</a></p>`;
 				html += `</div>`;
 			}
 			document.getElementById('searchResult').innerHTML = html;
@@ -57,8 +59,8 @@ function detailContent(event) {
    let ccbaKdcd = event.target.querySelector('input[name="ccbaKdcd"]').value;
    let ccbaAsno = event.target.querySelector('input[name="ccbaAsno"]').value;
    let ccbaCtcd = event.target.querySelector('input[name="ccbaCtcd"]').value;
-   alert(`sn: ${sn}, ccbaKdcd: ${ccbaKdcd}, ccbaAsno: ${ccbaAsno}, ccbaCtcd: ${ccbaCtcd}`);
-
-
+   let latitude = Number(event.target.querySelector('input[name="latitude"]').value);
+   let longitude = Number(event.target.querySelector('input[name="longitude"]').value);
+   console.log(`sn: ${sn}, ccbaKdcd: ${ccbaKdcd}, ccbaAsno: ${ccbaAsno}, ccbaCtcd: ${ccbaCtcd}, latitude:${latitude.toFixed(6)}, longitude: ${longitude.toFixed(6)}`);
 }
 
