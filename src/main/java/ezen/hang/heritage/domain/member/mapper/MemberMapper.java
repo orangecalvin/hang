@@ -12,5 +12,5 @@ import ezen.hang.heritage.domain.member.dto.Member;
 public interface MemberMapper {
 	public List<Member> findByAll();
 	
-    public void create(Member member);
+    public void CreateMember(Member member);
 }
