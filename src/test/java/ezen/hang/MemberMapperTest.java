@@ -30,7 +30,7 @@ class MemberMapperTest {
 	
 	
 	@Test
-	@Disabled
+//	@Disabled
 	void createTest() {
 		Member member = new Member();
 		member.setUserid("LEE");

@@ -12,6 +12,8 @@ public interface MemberService {
 	public List<Member> getMembers();
 	// 회원 상세 조회
 	public Member getMember(String id);
+
+	void register(Member member);
 	
 	// 기타 회원 관련 비즈니스 메소드들...
 }

@@ -28,7 +28,11 @@ public class MemberServiceImpl implements MemberService {
 	public List<Member> getMembers() {
 		return null;
 	}
-	
+
+	@Override
+	public void register(Member member){
+		memberMapper.CreateMember(member);
+	}
 }
 
 

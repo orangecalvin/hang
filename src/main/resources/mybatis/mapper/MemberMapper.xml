@@ -7,9 +7,9 @@
 		FROM MEMBER
 	</select>
 
-  <insert id="create" parameterType="Member">
-    INSERT INTO MEMBER (userid, userpw, username, email, userph, regdate) 
-    VALUES(#{userid}, #{userpw}, #{username}, #{email}, #{userph}, NOW());
+  <insert id="CreateMember" parameterType="Member">
+      INSERT INTO MEMBER (userid, userpw, username, email, userph, regdate)
+      VALUES(#{userid}, #{userpw}, #{username}, #{email}, #{userph}, NOW());
   </insert>
 </mapper>
 
