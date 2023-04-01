@@ -3,12 +3,14 @@ package ezen.hang.heritage.domain.item.dto;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+
 /**
  * 문화재 객체 자체 생성
  * "ccbaKdcd", "ccbaAsno", "ccbaCtcd", "ccbaCpno", "longitude", "latitude", "ccmaName", "crltsnoNm", "ccbaMnm1", "ccbaMnm2", "gcodeName", "bcodeName", "mcodeName", "scodeName", "ccbaQuan", "ccbaAsdt", "ccbaCtcdNm", "ccsiName", "ccbaLcad", "ccceName", "ccbaPoss", "ccbaAdmin", "ccbaCncl", "ccbaCndt", "imageUrl", "content"
  * @author 김정석
  * @date   2023. 3. 27.
  */
+
 public class Heritage {
     private String sn;
     private String no;
@@ -43,10 +45,12 @@ public class Heritage {
 	public Heritage() {
 	}
 	
+	// 검색 단어
 	public Heritage(String ccbaMnm1) {
 		this.ccbaMnm1 = ccbaMnm1;
 	}
 
+	// 검색바를 통한 검색객체
 	public Heritage(String sn, String no, String ccbaKdcd, String ccbaAsno, String ccbaCtcd, String ccbaCpno, String longitude,
 			String latitude, String ccmaName, String crltsnoNm, String ccbaMnm1, String ccbaMnm2, String gcodeName,
 			String bcodeName, String mcodeName, String scodeName, String ccbaQuan, String ccbaAsdt, String ccbaCtcdNm,
