@@ -33,11 +33,6 @@ public class SearchController {
 		return itemService.searchHeritageParsing(heritagename);
 	}
 
-//	@PostMapping("/detail")
-//	@ResponseBody
-//	public List<Heritage> search(@RequestParam("ccbaKdcd") String ccbaKdcd, @RequestParam("ccbaAsno") String ccbaAsno, @RequestParam("ccbaCtcd") String ccbaCtcd) {
-//		return itemService.detailSearchHeritageParsing(ccbaKdcd,ccbaAsno,ccbaCtcd);
-//	}
 
 	@PostMapping("/detail")
 	@ResponseBody

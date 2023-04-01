@@ -39,7 +39,7 @@ class MemberMapperTest {
 		member.setEmail("Hoon@gmail.com");
 		member.setUserph(010101040404);
 		
-		memberMapper.create(member);
+		memberMapper.CreateMember(member);
 		log.info("회원 등록 완료 : {}", member);
 	}
 	
