@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WebController {
 	@RequestMapping("/main")
 	public String main() {
-		return "main";
+		return "main2";
 	}
 }
 /* 디버깅용 */
