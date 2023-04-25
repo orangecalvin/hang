@@ -44,7 +44,7 @@ public class DataSearchDao{
 	
 	
 	public List<Heritage> searchHeritage (){
-		String url = "http://www.cha.go.kr/cha/SearchKindOpenapiList.do?ccbaMnm1="+ccbaMnm1Value;
+		String url = "http://www.cha.go.kr/cha/SearchKindOpenapiList.do?ccbaMnm1="+ccbaMnm1Value+"&pageUnit=30";
 		List<Heritage> list = new ArrayList<>();
 		try {
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -82,9 +82,9 @@ public class DataSearchDao{
 	}
 	
 	
-	public List<Heritage> detailSearchHeritage(){
+	public Heritage detailSearchHeritage(){
 		String url = "http://www.cha.go.kr/cha/SearchKindOpenapiDt.do?ccbaKdcd="+ccbaKdcd+"&ccbaAsno="+ccbaAsno+"&ccbaCtcd="+ccbaCtcd; // 상세조회
-		List<Heritage> list = new ArrayList<>();
+		Heritage heritage = new Heritage();
 		try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -95,7 +95,6 @@ public class DataSearchDao{
                 Node nNode = nList.item(temp);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 	Element eElement = (Element) nNode;
-					Heritage heritage = new Heritage();
 					heritage.setCcbaKdcd(eElement.getElementsByTagName("ccbaKdcd").item(0).getTextContent());
 					heritage.setCcbaAsno(eElement.getElementsByTagName("ccbaAsno").item(0).getTextContent());
 					heritage.setCcbaCtcd(eElement.getElementsByTagName("ccbaCtcd").item(0).getTextContent());
@@ -122,13 +121,12 @@ public class DataSearchDao{
                     heritage.setCcbaCndt(eElement.getElementsByTagName("ccbaCndt").item(0).getTextContent());
                     heritage.setImageUrl(eElement.getElementsByTagName("imageUrl").item(0).getTextContent());
                     heritage.setContent(eElement.getElementsByTagName("content").item(0).getTextContent());
-                    list.add(heritage);
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		return list;
+		return heritage;
 	}
 
 }

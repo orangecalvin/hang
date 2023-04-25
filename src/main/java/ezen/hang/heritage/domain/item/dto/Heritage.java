@@ -1,9 +1,4 @@
 package ezen.hang.heritage.domain.item.dto;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-
 /**
  * 문화재 객체 자체 생성
  * "ccbaKdcd", "ccbaAsno", "ccbaCtcd", "ccbaCpno", "longitude", "latitude", "ccmaName", "crltsnoNm", "ccbaMnm1", "ccbaMnm2", "gcodeName", "bcodeName", "mcodeName", "scodeName", "ccbaQuan", "ccbaAsdt", "ccbaCtcdNm", "ccsiName", "ccbaLcad", "ccceName", "ccbaPoss", "ccbaAdmin", "ccbaCncl", "ccbaCndt", "imageUrl", "content"
@@ -12,34 +7,8 @@ import com.google.gson.GsonBuilder;
  */
 
 public class Heritage {
-    private String sn;
-    private String no;
-	private String ccbaKdcd;
-	private String ccbaAsno;
-	private String ccbaCtcd;
-	private String ccbaCpno;
-	private String longitude;
-	private String latitude;
-	private String ccmaName;
-	private String crltsnoNm;
-	private String ccbaMnm1;
-	private String ccbaMnm2;
-	private String gcodeName;
-	private String bcodeName;
-	private String mcodeName;
-	private String scodeName;
-	private String ccbaQuan;
-	private String ccbaAsdt;
-	private String ccbaCtcdNm;
-	private String ccsiName;
-	private String ccbaLcad;
-	private String ccceName;
-	private String ccbaPoss;
-	private String ccbaAdmin;
-	private String ccbaCncl;
-	private String ccbaCndt;
-	private String imageUrl;
-	private String content;
+    private String sn, no, ccbaKdcd, ccbaAsno, ccbaCtcd, ccbaCpno, longitude, latitude, ccmaName, crltsnoNm, ccbaMnm1, ccbaMnm2, gcodeName, bcodeName, mcodeName, scodeName, ccbaQuan, ccbaAsdt, ccbaCtcdNm, ccsiName, ccbaLcad, ccceName, ccbaPoss, ccbaAdmin, ccbaCncl, ccbaCndt, imageUrl, content;
+	private CommentStarRate starRate;
 	
 	
 	public Heritage() {
@@ -55,7 +24,7 @@ public class Heritage {
 			String latitude, String ccmaName, String crltsnoNm, String ccbaMnm1, String ccbaMnm2, String gcodeName,
 			String bcodeName, String mcodeName, String scodeName, String ccbaQuan, String ccbaAsdt, String ccbaCtcdNm,
 			String ccsiName, String ccbaLcad, String ccceName, String ccbaPoss, String ccbaAdmin, String ccbaCncl,
-			String ccbaCndt, String imageUrl, String content) {
+			String ccbaCndt, String imageUrl, String content, CommentStarRate starRate) {
 		this.sn = sn;
 		this.no = no;
 		this.ccbaKdcd = ccbaKdcd;
@@ -84,6 +53,7 @@ public class Heritage {
 		this.ccbaCndt = ccbaCndt;
 		this.imageUrl = imageUrl;
 		this.content = content;
+		this.starRate = starRate;
 	}
 	
 	public String getSn() {
@@ -362,9 +332,25 @@ public class Heritage {
 		this.content = content;
 	}
 	
-	public String toJson() {
-        Gson gson = new GsonBuilder().create();
-        return gson.toJson(this);
-    }
 	
+	public CommentStarRate getStarRate() {
+		return starRate;
+	}
+
+	public void setStarRate(CommentStarRate starRate) {
+		this.starRate = starRate;
+	}
+
+	@Override
+	public String toString() {
+		return "Heritage [sn=" + sn + ", no=" + no + ", ccbaKdcd=" + ccbaKdcd + ", ccbaAsno=" + ccbaAsno + ", ccbaCtcd="
+				+ ccbaCtcd + ", ccbaCpno=" + ccbaCpno + ", longitude=" + longitude + ", latitude=" + latitude
+				+ ", ccmaName=" + ccmaName + ", crltsnoNm=" + crltsnoNm + ", ccbaMnm1=" + ccbaMnm1 + ", ccbaMnm2="
+				+ ccbaMnm2 + ", gcodeName=" + gcodeName + ", bcodeName=" + bcodeName + ", mcodeName=" + mcodeName
+				+ ", scodeName=" + scodeName + ", ccbaQuan=" + ccbaQuan + ", ccbaAsdt=" + ccbaAsdt + ", ccbaCtcdNm="
+				+ ccbaCtcdNm + ", ccsiName=" + ccsiName + ", ccbaLcad=" + ccbaLcad + ", ccceName=" + ccceName
+				+ ", ccbaPoss=" + ccbaPoss + ", ccbaAdmin=" + ccbaAdmin + ", ccbaCncl=" + ccbaCncl + ", ccbaCndt="
+				+ ccbaCndt + ", imageUrl=" + imageUrl + ", content=" + content + ", starRate=" + starRate + "]";
+	}
+
 }

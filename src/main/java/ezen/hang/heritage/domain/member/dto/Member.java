@@ -3,11 +3,7 @@ package ezen.hang.heritage.domain.member.dto;
 import java.sql.Date;
 
 public class Member {
-	private String userid;
-	private String userpw;
-	private int userph;
-	private String username;
-	private String email;
+	private String userid, userpw, userph, username, email, imagefilename, admin, access;
 	private Date regdate;
 	
 
@@ -16,13 +12,16 @@ public class Member {
 	}
 
 
-	public Member(String userid, String userpw, int userph, String username, String email, Date regdate) {
+	public Member(String userid, String userpw, String userph, String username, String email, Date regdate, String imagefilename, String admin, String access) {
 		this.userid = userid;
 		this.userpw = userpw;
 		this.userph = userph;
 		this.username = username;
 		this.email = email;
 		this.regdate = regdate;
+		this.imagefilename = imagefilename;
+		this.admin = admin;
+		this.access = access;
 	}
 
 
@@ -46,12 +45,12 @@ public class Member {
 	}
 
 
-	public int getUserph() {
+	public String getUserph() {
 		return userph;
 	}
 
 
-	public void setUserph(int userph) {
+	public void setUserph(String userph) {
 		this.userph = userph;
 	}
 
@@ -86,15 +85,40 @@ public class Member {
 	}
 
 
-	@Override
-	public String toString() {
-		return "Member [userid=" + userid + ", userpw=" + userpw + ", userph=" + userph + ", username=" + username
-				+ ", email=" + email + ", regdate=" + regdate + "]";
+	public String getImagefilename() {
+		return imagefilename;
 	}
 
 
+	public void setImagefilename(String profileUUID) {
+		this.imagefilename = profileUUID;
+	}
 
 
-	
-	
+	public String getAdmin() {
+		return admin;
+	}
+
+
+	public void setAdmin(String admin) {
+		this.admin = admin;
+	}
+
+
+	public String getAccess() {
+		return access;
+	}
+
+
+	public void setAccess(String access) {
+		this.access = access;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Member [userid=" + userid + ", userpw=" + userpw + ", userph=" + userph + ", username=" + username
+				+ ", email=" + email + ", imagefilename=" + imagefilename + ", admin=" + admin + ", access=" + access
+				+ ", regdate=" + regdate + "]";
+	}
 }
